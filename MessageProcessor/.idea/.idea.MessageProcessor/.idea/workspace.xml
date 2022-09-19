@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Finish the parser">
-      <change afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageProcessor.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/MessageProcessor.sln.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Caracal.IO.MessageProcessor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Caracal.IO.MessageProcessor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/IDevice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/IDevice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/InvalidMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/InvalidMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/Tspv.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/Tspv.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/ValidMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/ValidMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Usings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/Caracal.IO.MessageProcessor.Tests.Unit.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/Caracal.IO.MessageProcessor.Tests.Unit.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add Processor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
@@ -64,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663579945801</updated>
-      <workItem from="1663579951206" duration="27685000" />
+      <workItem from="1663579951206" duration="28356000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <created>1663581643066</created>
@@ -108,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663598553185</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Processor">
+      <created>1663613517425</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663613517425</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +129,8 @@
     <MESSAGE value="parse header" />
     <MESSAGE value="Remove comments" />
     <MESSAGE value="Finish the parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish the parser" />
+    <MESSAGE value="Add Processor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Processor" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
