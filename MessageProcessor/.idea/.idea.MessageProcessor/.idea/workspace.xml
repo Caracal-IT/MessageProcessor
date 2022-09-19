@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="parse header">
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Remove comments">
+      <change afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/Tspv.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessageProcessor.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/MessageProcessor.sln.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Extensions/ByteExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Extensions/ByteExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/ValidMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Messages/ValidMessage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +19,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -49,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663579945801</updated>
-      <workItem from="1663579951206" duration="8275000" />
+      <workItem from="1663579951206" duration="16901000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <created>1663581643066</created>
@@ -79,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663587921115</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Remove comments">
+      <created>1663588416051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663588416051</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +119,33 @@
     <MESSAGE value="Check message length" />
     <MESSAGE value="Parse header" />
     <MESSAGE value="parse header" />
-    <option name="LAST_COMMIT_MESSAGE" value="parse header" />
+    <MESSAGE value="Remove comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove comments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs</url>
+          <line>71</line>
+          <properties documentPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" initialLine="74" containingFunctionPresentation="method 'ShouldParseTspVsForValidMessage'">
+            <startOffsets>
+              <option value="2319" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2320" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Caracal.IO.MessageProcessor.Messages.ValidMessage" memberName="Date" />
+        <PinnedItemInfo parentTag="Frame#Caracal.IO.MessageProcessor.Tests.Unit.AMessageParser.ShouldParseTspVsForValidMessage" memberName="message" />
+        <PinnedItemInfo parentTag="Type#Caracal.IO.MessageProcessor.Messages.Tspv" memberName="Value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
