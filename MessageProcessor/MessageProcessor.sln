@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caracal.IO.MessageProcessor", "src\Caracal.IO.MessageProcessor\Caracal.IO.MessageProcessor.csproj", "{1F8F053E-95FC-48E7-B8EA-28946881735C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1ECB4C28-7660-4C7A-9A4B-0EF893412ED1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A169E8BB-CA78-46FA-87F3-0C24C3ECB682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caracal.IO.MessageProcessor.Tests.Unit", "test\Caracal.IO.MessageProcessor.Tests.Unit\Caracal.IO.MessageProcessor.Tests.Unit.csproj", "{C4E1F2A0-6D90-4103-9862-C473286B7768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F8F053E-95FC-48E7-B8EA-28946881735C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8F053E-95FC-48E7-B8EA-28946881735C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8F053E-95FC-48E7-B8EA-28946881735C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8F053E-95FC-48E7-B8EA-28946881735C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E1F2A0-6D90-4103-9862-C473286B7768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E1F2A0-6D90-4103-9862-C473286B7768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E1F2A0-6D90-4103-9862-C473286B7768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E1F2A0-6D90-4103-9862-C473286B7768}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F8F053E-95FC-48E7-B8EA-28946881735C} = {1ECB4C28-7660-4C7A-9A4B-0EF893412ED1}
+		{C4E1F2A0-6D90-4103-9862-C473286B7768} = {A169E8BB-CA78-46FA-87F3-0C24C3ECB682}
+	EndGlobalSection
+EndGlobal
