@@ -48,9 +48,6 @@ public class AMessageParser {
     // Act
     var message = MessageParser.Parse(_validPacket, PacketLength) as ValidMessage;
     
-    // 0x62, 0x55, 0x76, 0x5E
-    var a = _validPacket[2..6];
-    
     // Assert
     message!.Version.Should().Be(_validPacket[0]);
     message.PacketId.Should().Be(_validPacket[1]);

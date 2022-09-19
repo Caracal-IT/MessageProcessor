@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Parse header" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="parse header">
+      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663579945801</updated>
-      <workItem from="1663579951206" duration="7823000" />
+      <workItem from="1663579951206" duration="8275000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <created>1663581643066</created>
@@ -70,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663587781929</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="parse header">
+      <created>1663587921115</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663587921115</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,38 +103,7 @@
     <MESSAGE value="Setup Project" />
     <MESSAGE value="Check message length" />
     <MESSAGE value="Parse header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parse header" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs</url>
-          <line>54</line>
-          <properties documentPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" initialLine="52" containingFunctionPresentation="method 'ShouldParseHeaderForValidMessage'">
-            <startOffsets>
-              <option value="1678" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1724" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs</url>
-          <line>45</line>
-          <properties documentPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" initialLine="45" containingFunctionPresentation="method 'ShouldParseHeaderForValidMessage'">
-            <startOffsets>
-              <option value="1439" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1492" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="parse header" />
+    <option name="LAST_COMMIT_MESSAGE" value="parse header" />
   </component>
 </project>
