@@ -18,7 +18,7 @@ public sealed class MessageParser {
     if (!IsMessageValid())
       return new InvalidMessage { Error = _lastError };
 
-    return new InvalidMessage() {Error = ""};
+    return new ValidMessage(_packet!);
   }
 
   private bool IsMessageValid() {
