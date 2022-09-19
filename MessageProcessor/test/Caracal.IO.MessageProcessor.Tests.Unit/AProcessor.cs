@@ -46,6 +46,25 @@ public class AProcessor: IDisposable {
 		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x03 && b[1] == 0x10), 0x0A, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
 	}
 
+	[Fact]
+	public async Task ShouldProcessTwoSequentialMessages() {
+		// Arrange
+		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		
+		var secondPacket = (byte[]) _defaultPacket.Clone();
+		secondPacket[1] = 0x05;
+		secondPacket[6] = 0x08;
+		secondPacket[13] = 0x09;
+
+		// Act
+		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
+		_device.MessageReceived += Raise.EventWith(this, new MessageEventArgs(secondPacket));
+		
+		// Assert
+		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x08 && b[1] == 0x20), 0x02, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x09 && b[1] == 0x10), 0x0A, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+	}
+
 	public void Dispose() {
 		_cancellationToken.Dispose();
 	}

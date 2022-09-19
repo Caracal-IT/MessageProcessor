@@ -14,7 +14,7 @@ public sealed class Processor {
     _logger = logger;
     _cancellationToken = cancellationToken;
     
-    _device.MessageReceived += (_, packet) => ProcessMessage(MessageParser.Parse(packet, PackingSize));
+    _device.MessageReceived += (_, eventArgs) => ProcessMessage(MessageParser.Parse(eventArgs.Message, PackingSize));
   }
 
   public static async Task ProcessAsync(ILogger<Processor> logger, IDevice device, CancellationToken cancellationToken) {
