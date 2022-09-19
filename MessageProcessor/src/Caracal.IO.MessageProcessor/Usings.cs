@@ -1,1 +1,1 @@
-global using Caracal.IO.MessageProcessor.Packets;
+global using Caracal.IO.MessageProcessor.Messages;
