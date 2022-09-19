@@ -56,18 +56,23 @@ public class AMessageParser {
 
   [Fact]
   public void ShouldParseTspVsForValidMessage() {
+    // Arrange
+    var baseDateTime = _validPacket[2..6].GetDateFromEpoch();
+    
     // Act
     var message = MessageParser.Parse(_validPacket, PacketLength) as ValidMessage;
 
     // Assert
     message!.TspVs.Should().HaveCount(2);
 
-    message.TspVs.First().Status.Should().Be(544);
-    message.TspVs.First().OffSet.Should().Be(2);
+    message.TspVs.First().Status.Should().BeEquivalentTo(new byte[]{0x02, 0x20});
+    message.TspVs.First().Offset.Should().Be(2);
+    message.TspVs.First().Date.Should().Be(baseDateTime.AddSeconds(2));
     message.TspVs.First().Value.Should().BeApproximately(1.2345F, 4);
     
-    message.TspVs.Last().Status.Should().Be(784);
-    message.TspVs.Last().OffSet.Should().Be(10);
+    message.TspVs.Last().Status.Should().BeEquivalentTo(new byte[]{0x03, 0x10});
+    message.TspVs.Last().Offset.Should().Be(10);
+    message.TspVs.Last().Date.Should().Be(baseDateTime.AddSeconds(10));
     message.TspVs.Last().Value.Should().BeApproximately(1.2345F, 4);
   }
 }

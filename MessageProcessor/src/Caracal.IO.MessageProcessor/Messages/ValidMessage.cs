@@ -1,21 +1,19 @@
 namespace Caracal.IO.MessageProcessor.Messages; 
 
 public sealed class ValidMessage: Message {
-  private readonly byte[] _packet;
-  
-  public byte Version => _packet[0];
-  public byte PacketId => _packet[1];
-  
-  public DateTime Date => _packet[2..6].GetDateFromEpoch();
-
-  public Tspv[] TspVs { get; init; }
+  public byte Version { get; }
+  public byte PacketId { get; }
+  public DateTime Date {get; }
+  public Tspv[] TspVs { get; }
 
   public ValidMessage(byte[] packet) {
-    _packet = packet;
+    Version = packet[0];
+    PacketId = packet[1];
+    Date = packet[2..6].GetDateFromEpoch();
     
     TspVs = new[] {
-      new Tspv(_packet[^14..^7]),
-      new Tspv(_packet[^7..])
+      new Tspv(packet[^14..^7], Date),
+      new Tspv(packet[^7..], Date)
     };
   }
 }
