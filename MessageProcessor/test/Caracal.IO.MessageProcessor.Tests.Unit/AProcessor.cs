@@ -1,6 +1,3 @@
-using FluentAssertions;
-using Microsoft.Extensions.Logging;
-
 namespace Caracal.IO.MessageProcessor.Tests.Unit; 
 
 public class AProcessor: IDisposable {
