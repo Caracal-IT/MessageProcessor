@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add Processor" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Update workspace">
+      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/Usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/Usings.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663613517425</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update workspace">
+      <created>1663615790239</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663615790239</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,9 +142,27 @@
     <MESSAGE value="Remove comments" />
     <MESSAGE value="Finish the parser" />
     <MESSAGE value="Add Processor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Processor" />
+    <MESSAGE value="Update workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="25" containingFunctionPresentation="method 'ProcessAsync'">
+            <startOffsets>
+              <option value="930" />
+            </startOffsets>
+            <endOffsets>
+              <option value="971" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Caracal.IO.MessageProcessor.Messages.ValidMessage" memberName="Date" />

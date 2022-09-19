@@ -9,7 +9,7 @@ public sealed class Processor {
   private readonly ILogger<Processor> _logger;
   private readonly CancellationToken _cancellationToken;
   
-  public Processor(ILogger<Processor> logger, IDevice device, CancellationToken cancellationToken) {
+  private Processor(ILogger<Processor> logger, IDevice device, CancellationToken cancellationToken) {
     _device = device;
     _logger = logger;
     _cancellationToken = cancellationToken;
@@ -30,9 +30,14 @@ public sealed class Processor {
       ProcessFirstMessage(message);
     else
       ProcessMessage((InvalidMessage) msg);
-    
-    while (!_cancellationToken.IsCancellationRequested) {
-      await Task.Delay(1000, _cancellationToken);
+
+    try {
+      while (!_cancellationToken.IsCancellationRequested) {
+        await Task.Delay(1000, _cancellationToken);
+      }
+    }
+    catch (TaskCanceledException) {
+      _logger.LogInformation("Processor stopped");
     }
   }
 
@@ -47,6 +52,7 @@ public sealed class Processor {
   private void ProcessFirstMessage(ValidMessage message) {
     _lastProcessedDate = message.TspVs.Last().Date;
     _currentPacketId = message.PacketId;
+    SendMessageToDevice(message);
   }
 
   private void ProcessMessage(ValidMessage message) {
