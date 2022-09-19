@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Sequencial message test">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" afterDir="false" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add tests">
       <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +19,7 @@
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663620302801</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add tests">
+      <created>1663623504858</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663623504858</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +167,8 @@
     <MESSAGE value="Update workspace" />
     <MESSAGE value="Writing tests for the processor" />
     <MESSAGE value="Sequencial message test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sequencial message test" />
+    <MESSAGE value="Add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -178,6 +185,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs</url>
+          <line>67</line>
+          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="67" containingFunctionPresentation="method 'RequestMissingPackets'">
+            <startOffsets>
+              <option value="2185" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2252" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

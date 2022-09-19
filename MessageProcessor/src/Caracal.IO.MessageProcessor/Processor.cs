@@ -68,7 +68,7 @@ public sealed class Processor {
     var numberOfMissingItems = message.PacketId - _currentPacketId - 1;
 
     if (message.PacketId < _currentPacketId) 
-      numberOfMissingItems = (_currentPacketId + message.PacketId) % 255;
+      numberOfMissingItems = (_currentPacketId + message.PacketId) % 255 - 1;
 
     for (var i = 0; i < numberOfMissingItems; i++) {
       ProcessOldMessage(i);
