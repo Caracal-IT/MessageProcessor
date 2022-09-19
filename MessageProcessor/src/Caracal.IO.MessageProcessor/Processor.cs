@@ -1,7 +1,7 @@
 namespace Caracal.IO.MessageProcessor; 
 
 public sealed class Processor {
-  private byte _currentPacketId = 0;
+  private byte _currentPacketId;
   private DateTime _lastProcessedDate = DateTime.MinValue;
 
   private const int PackingSize = 20;
@@ -49,12 +49,8 @@ public sealed class Processor {
     }
   }
 
-  private void ProcessFirstMessage(ValidMessage message) {
-    _lastProcessedDate = message.TspVs.Last().Date;
-    _currentPacketId = message.PacketId;
-    SendMessageToDevice(message);
-  }
-
+  private void ProcessFirstMessage(ValidMessage message) => SendMessageToDevice(message);
+  
   private void ProcessMessage(ValidMessage message) {
     if (message.TspVs.Last().Date < _lastProcessedDate)
       return;
@@ -69,7 +65,7 @@ public sealed class Processor {
   }
 
   private void RequestMissingPackets(ValidMessage message) {
-    var numberOfMissingItems = message.PacketId - _currentPacketId;
+    var numberOfMissingItems = message.PacketId - _currentPacketId - 1;
 
     if (message.PacketId < _currentPacketId) 
       numberOfMissingItems = (_currentPacketId + message.PacketId) % 255;
@@ -83,7 +79,7 @@ public sealed class Processor {
     var id = (byte)  ((_currentPacketId + index) % 255 + 1);
     var msg = MessageParser.Parse(_device.RequestOldPacket(id), PackingSize);
 
-    if(msg is ValidMessage m && m.TspVs.Last().Date < _lastProcessedDate)
+    if(msg is ValidMessage m)
       SendMessageToDevice(m);
   }
 
@@ -91,7 +87,8 @@ public sealed class Processor {
     _currentPacketId = message.PacketId;
 
     foreach (var tsvp in message.TspVs) {
-      _device.PostTspv(tsvp.Status, tsvp.Offset, tsvp.Value);  
+      if(tsvp.Date > _lastProcessedDate)
+        _device.PostTspv(tsvp.Status, tsvp.Offset, tsvp.Value);  
     }
     
     _lastProcessedDate = message.TspVs.Last().Date;

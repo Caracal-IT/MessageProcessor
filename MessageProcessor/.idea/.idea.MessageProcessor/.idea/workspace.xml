@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Writing tests for the processor">
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Sequencial message test">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/IDevice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/IDevice.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" afterDir="false" />
     </list>
@@ -22,6 +21,7 @@
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663617804390</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Sequencial message test">
+      <created>1663620302801</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663620302801</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,23 +160,24 @@
     <MESSAGE value="Add Processor" />
     <MESSAGE value="Update workspace" />
     <MESSAGE value="Writing tests for the processor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Writing tests for the processor" />
+    <MESSAGE value="Sequencial message test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sequencial message test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="58" containingFunctionPresentation="method 'ProcessMessage'">
+          <line>54</line>
+          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="54" containingFunctionPresentation="method 'ProcessMessage'">
             <startOffsets>
-              <option value="1988" />
+              <option value="1886" />
             </startOffsets>
             <endOffsets>
-              <option value="2039" />
+              <option value="1937" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
