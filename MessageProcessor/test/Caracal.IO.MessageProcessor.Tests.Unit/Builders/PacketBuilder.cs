@@ -20,5 +20,14 @@ public sealed class PacketBuilder {
     return this;
   }
 
+  public PacketBuilder WithFirstTspvStatus(byte firstBit, byte? secondBit = null) {
+    _packet[6] = firstBit;
+
+    if (secondBit.HasValue)
+      _packet[7] = secondBit.Value;
+    
+    return this;
+  }
+
   public byte[] Build() => (byte[]) _packet.Clone();
 }

@@ -47,9 +47,9 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 															      .WithPacketId(0x05)
+															      .WithFirstTspvStatus(0x08)
 			                              .Build();
 		
-		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0C;
@@ -73,9 +73,9 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																    .WithPacketId(0x05)
+																    .WithFirstTspvStatus(0x08)
 																	  .Build();
 		
-		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x01;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x01;
@@ -100,9 +100,9 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x01)
+																	  .WithFirstTspvStatus(0x08)
 																		.Build();
 		
-		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0C;
@@ -126,9 +126,9 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x05)
+																	  .WithFirstTspvStatus(0x08)
 																		.Build();
-		
-		secondPacket[6] = 0x08;
+
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0B;
@@ -136,9 +136,9 @@ public class AProcessor: IDisposable {
 		
 		var thirdPacket =PacketBuilder.CreateDefaultPacket()
 																  .WithPacketId(0x06)
+																  .WithFirstTspvStatus(0x10)
 															    .Build();
 		
-		thirdPacket[6] = 0x10;
 		thirdPacket[8] = 0x0C;
 		thirdPacket[13] = 0x11;
 		thirdPacket[15] = 0x0C;
@@ -165,8 +165,8 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x01)
+																	  .WithFirstTspvStatus(0x08)
 																		.Build();
-		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0B;
@@ -174,9 +174,9 @@ public class AProcessor: IDisposable {
 		
 		var thirdPacket = PacketBuilder.CreateDefaultPacket()
 																   .WithPacketId(0x02)
+																   .WithFirstTspvStatus(0x10)
 																   .Build();
 		
-		thirdPacket[6] = 0x10;
 		thirdPacket[8] = 0x0C;
 		thirdPacket[13] = 0x11;
 		thirdPacket[15] = 0x0C;
