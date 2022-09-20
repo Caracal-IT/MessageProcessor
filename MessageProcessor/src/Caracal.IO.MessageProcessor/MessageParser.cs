@@ -1,18 +1,17 @@
 namespace Caracal.IO.MessageProcessor; 
 
 public sealed class MessageParser {
+  private const byte PacketLength = 20;
   private readonly byte[]? _packet;
-  private readonly byte _packetLength;
   private string _lastError;
 
-  private MessageParser(byte[]? packet, byte packetLength) {
+  private MessageParser(byte[]? packet) {
     _packet = packet;
-    _packetLength = packetLength;
     _lastError = string.Empty;
   }
 
-  public static Message Parse(byte[]? bytes, byte packetLength) => 
-    new MessageParser(bytes, packetLength).Parse();
+  public static Message Parse(byte[]? bytes) => 
+    new MessageParser(bytes).Parse();
 
   private Message Parse() {
     if (!IsMessageValid())
@@ -27,8 +26,8 @@ public sealed class MessageParser {
       return false;
     }
 
-    if (_packet.Length < _packetLength) {
-      _lastError = $"Invalid length {_packet.Length} should be {_packetLength}";
+    if (_packet.Length < PacketLength) {
+      _lastError = $"Invalid length {_packet.Length} should be {PacketLength}";
       return false;
     }
 

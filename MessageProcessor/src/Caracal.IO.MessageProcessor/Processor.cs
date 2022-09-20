@@ -3,8 +3,7 @@ namespace Caracal.IO.MessageProcessor;
 public sealed class Processor {
   private byte _currentPacketId;
   private DateTime _lastProcessedDate = DateTime.MinValue;
-
-  private const int PackingSize = 20;
+  
   private readonly IDevice _device;
   private readonly ILogger<Processor> _logger;
   private readonly CancellationToken _cancellationToken;
@@ -14,7 +13,7 @@ public sealed class Processor {
     _logger = logger;
     _cancellationToken = cancellationToken;
     
-    _device.MessageReceived += (_, eventArgs) => ProcessMessage(MessageParser.Parse(eventArgs.Message, PackingSize));
+    _device.MessageReceived += (_, eventArgs) => ProcessMessage(MessageParser.Parse(eventArgs.Message));
   }
 
   public static async Task ProcessAsync(ILogger<Processor> logger, IDevice device, CancellationToken cancellationToken) {
@@ -24,7 +23,7 @@ public sealed class Processor {
 
   private async Task ProcessAsync() {
     var packet = _device.RequestOldPacket(0);
-    var msg = MessageParser.Parse(packet, PackingSize);
+    var msg = MessageParser.Parse(packet);
 
     if (msg is ValidMessage message)
       ProcessFirstMessage(message);
@@ -77,7 +76,7 @@ public sealed class Processor {
 
   private void ProcessOldMessage(int index) {
     var id = (byte)  ((_currentPacketId + index) % 255 + 1);
-    var msg = MessageParser.Parse(_device.RequestOldPacket(id), PackingSize);
+    var msg = MessageParser.Parse(_device.RequestOldPacket(id));
 
     if(msg is ValidMessage m)
       SendMessageToDevice(m);

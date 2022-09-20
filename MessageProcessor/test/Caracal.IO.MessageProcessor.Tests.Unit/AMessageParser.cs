@@ -15,7 +15,7 @@ public class AMessageParser {
     byte[]? invalidPacket = null;
     
     // Act
-    var message = MessageParser.Parse(invalidPacket, PacketLength) as InvalidMessage;
+    var message = MessageParser.Parse(invalidPacket) as InvalidMessage;
     
     // Assert
     message.Should().BeOfType<InvalidMessage>();
@@ -29,7 +29,7 @@ public class AMessageParser {
   [InlineData(new byte[] { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19 })]
   public void ShouldReturnInvalidMessageForInvalidPacketLength(byte[] packet) {
     // Act
-    var message = MessageParser.Parse(packet, PacketLength) as InvalidMessage;
+    var message = MessageParser.Parse(packet) as InvalidMessage;
     
     // Assert
     message.Should().BeOfType<InvalidMessage>();
@@ -42,7 +42,7 @@ public class AMessageParser {
     var baseTime = _validPacket[2..6].GetDateFromEpoch();
 
     // Act
-    var message = MessageParser.Parse(_validPacket, PacketLength) as ValidMessage;
+    var message = MessageParser.Parse(_validPacket) as ValidMessage;
     
     // Assert
     message!.Version.Should().Be(_validPacket[0]);
@@ -56,7 +56,7 @@ public class AMessageParser {
     var baseDateTime = _validPacket[2..6].GetDateFromEpoch();
     
     // Act
-    var message = MessageParser.Parse(_validPacket, PacketLength) as ValidMessage;
+    var message = MessageParser.Parse(_validPacket) as ValidMessage;
 
     // Assert
     message!.TspVs.Should().HaveCount(2);
