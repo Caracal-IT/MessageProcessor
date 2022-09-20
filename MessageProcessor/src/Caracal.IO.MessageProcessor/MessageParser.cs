@@ -26,12 +26,11 @@ public sealed class MessageParser {
       return false;
     }
 
-    if (_packet.Length < PacketLength) {
-      _lastError = $"Invalid length {_packet.Length} should be {PacketLength}";
-      return false;
-    }
+    if (_packet.Length == PacketLength) return true;
+    
+    _lastError = $"Invalid length {_packet.Length} should be {PacketLength}";
+    return false;
 
-    return true;
   }
   
 }
