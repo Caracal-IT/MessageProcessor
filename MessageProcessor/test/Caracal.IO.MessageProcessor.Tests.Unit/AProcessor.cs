@@ -45,16 +45,8 @@ public class AProcessor: IDisposable {
 		
 		_device.RequestOldPacket(0).Returns(packet);
 		
-		var secondPacket = PacketBuilder.CreateDefaultPacket()
-															      .WithPacketId(0x05)
-															      
-															      .WithFirstTspvStatus(0x08)
-															      .WithFirstTspvDateOffset(0x0B)
-															      
-															      .WithSecondTspvStatus(0x09)
-															      .WithSecondTspvDateOffset(0x0B)
-															      
-			                              .Build();
+		var secondPacket = PacketBuilder.CreateSecondPacket()
+															      .Build();
 
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -73,16 +65,10 @@ public class AProcessor: IDisposable {
 		
 		_device.RequestOldPacket(0).Returns(packet);
 		
-		var secondPacket = PacketBuilder.CreateDefaultPacket()
-																    .WithPacketId(0x05)
-																    
-																    .WithFirstTspvStatus(0x08)
-																    .WithFirstTspvDateOffset(0x01)
-																    
-																    .WithSecondTspvStatus(0x09)
-																    .WithSecondTspvDateOffset(0x01)
-																    
-																	  .Build();
+		var secondPacket = PacketBuilder.CreateSecondPacket()
+																		.WithFirstTspvDateOffset(0x01)
+																		.WithSecondTspvDateOffset(0x01)
+																		.Build();
 
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -102,16 +88,9 @@ public class AProcessor: IDisposable {
 		packet[1] = 255;
 		_device.RequestOldPacket(0).Returns(packet);
 		
-		var secondPacket = PacketBuilder.CreateDefaultPacket()
+		var secondPacket = PacketBuilder.CreateSecondPacket()
 																	  .WithPacketId(0x01)
-																	  
-																	  .WithFirstTspvStatus(0x08)
-																	  .WithFirstTspvDateOffset(0x0B)
-																	  
-																	  .WithSecondTspvStatus(0x09)
-																	  .WithSecondTspvDateOffset(0x0B)
-																	  
-																		.Build();
+																	  .Build();
 
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -130,16 +109,8 @@ public class AProcessor: IDisposable {
 		
 		_device.RequestOldPacket(0).Returns(packet);
 		
-		var secondPacket = PacketBuilder.CreateDefaultPacket()
-																	  .WithPacketId(0x05)
-																	  
-																	  .WithFirstTspvStatus(0x08)
-																	  .WithFirstTspvDateOffset(0x0B)
-																	  
-																	  .WithSecondTspvStatus(0x09)
-																	  .WithSecondTspvDateOffset(0x0B)
-																	  
-																		.Build();
+		var secondPacket = PacketBuilder.CreateSecondPacket()
+																	  .Build();
 		
 		_device.RequestOldPacket(5).Returns(secondPacket);
 		
@@ -174,16 +145,9 @@ public class AProcessor: IDisposable {
 		packet[1] = 255;
 		_device.RequestOldPacket(0).Returns(packet);
 		
-		var secondPacket = PacketBuilder.CreateDefaultPacket()
+		var secondPacket = PacketBuilder.CreateSecondPacket()
 																	  .WithPacketId(0x01)
-																	  
-																	  .WithFirstTspvStatus(0x08)
-																	  .WithFirstTspvDateOffset(0x0B)
-																	  
-																	  .WithSecondTspvStatus(0x09)
-																	  .WithSecondTspvDateOffset(0x0B)
-																	  
-																		.Build();
+																	  .Build();
 
 		_device.RequestOldPacket(1).Returns(secondPacket);
 		

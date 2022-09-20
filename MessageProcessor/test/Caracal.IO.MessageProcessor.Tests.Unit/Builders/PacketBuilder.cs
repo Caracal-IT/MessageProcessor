@@ -16,9 +16,13 @@ public sealed class PacketBuilder {
   public static PacketBuilder CreateDefaultPacket() => new ();
   
   public static PacketBuilder CreateSecondPacket() {
-    var packet =  CreateDefaultPacket()
-                    ;
-    
+    var packet =  CreateDefaultPacket().WithPacketId(0x05)
+															      
+                                       .WithFirstTspvStatus(0x08)
+                                       .WithFirstTspvDateOffset(0x0B)
+      
+                                       .WithSecondTspvStatus(0x09)
+                                       .WithSecondTspvDateOffset(0x0B);
     
     return packet;
   }
