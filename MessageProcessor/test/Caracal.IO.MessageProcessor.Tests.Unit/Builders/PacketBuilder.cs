@@ -18,10 +18,10 @@ public sealed class PacketBuilder {
   public static PacketBuilder CreateSecondPacket() {
     var packet =  CreateDefaultPacket().WithPacketId(0x05)
 															      
-                                       .WithFirstTspvStatus(0x08)
+                                       .WithFirstTspvStatus(0x08, 0x20)
                                        .WithFirstTspvDateOffset(0x0B)
       
-                                       .WithSecondTspvStatus(0x09)
+                                       .WithSecondTspvStatus(0x09, 0x10)
                                        .WithSecondTspvDateOffset(0x0B);
     
     return packet;
