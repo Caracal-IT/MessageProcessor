@@ -38,6 +38,24 @@ public class AProcessor: IDisposable {
 			_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x03 && b[1] == 0x10), 0x0A, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
 		});
 	}
+	
+	[Fact]
+	public async Task ShouldNotProcessInvalidFirstMessageAndLogError() {
+		// Arrange
+		var packet = PacketBuilder.CreateDefaultPacket()
+			                        .Build();
+		
+		_device.RequestOldPacket(0).Returns(packet[1..]);
+		
+		// Act
+		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
+		
+		// Assert
+		_device.DidNotReceive().PostTspv(Arg.Is<byte[]>(b => b[0] == 0x02 && b[1] == 0x20), 0x02, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+		_device.DidNotReceive().PostTspv(Arg.Is<byte[]>(b => b[0] == 0x03 && b[1] == 0x10), 0x0A, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+		
+		_logger.Received(1).LogError(Arg.Is<EventId>(e => e.Id == 1 && e.Name == "Invalid length 19 should be 20"), "Un unexpected error occured processing the message");
+	}
 
 	[Fact]
 	public async Task ShouldProcessTwoSequentialMessages() {
