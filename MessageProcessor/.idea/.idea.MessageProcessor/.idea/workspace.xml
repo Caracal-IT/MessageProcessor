@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Remove dead code">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add third packet to the builder" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +17,13 @@
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -160,7 +165,56 @@
       <option name="project" value="LOCAL" />
       <updated>1663624309965</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactor test">
+      <created>1663645135765</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663645135766</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Create ststus in builder">
+      <created>1663645630262</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663645630262</updated>
+    </task>
+    <task id="LOCAL-00017" summary="With date offset">
+      <created>1663646048472</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663646048472</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Second tspv in builder">
+      <created>1663646366345</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663646366345</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Refactor builder">
+      <created>1663646797039</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663646797039</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add second packet in builder">
+      <created>1663647120597</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663647120597</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add third packet to the builder">
+      <created>1663647346370</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1663647346370</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +249,14 @@
     <MESSAGE value="Add edge case test" />
     <MESSAGE value="Add test for old messages" />
     <MESSAGE value="Remove dead code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove dead code" />
+    <MESSAGE value="Refactor test" />
+    <MESSAGE value="Create ststus in builder" />
+    <MESSAGE value="With date offset" />
+    <MESSAGE value="Second tspv in builder" />
+    <MESSAGE value="Refactor builder" />
+    <MESSAGE value="Add second packet in builder" />
+    <MESSAGE value="Add third packet to the builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add third packet to the builder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
