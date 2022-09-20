@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add third packet to the builder" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add order to the assert" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +18,7 @@
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -214,11 +215,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663647346370</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add order to the assert">
+      <created>1663648001265</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1663648001265</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="209" />
+    <coverage-tree-state>
+      <expand />
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -256,7 +274,8 @@
     <MESSAGE value="Refactor builder" />
     <MESSAGE value="Add second packet in builder" />
     <MESSAGE value="Add third packet to the builder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add third packet to the builder" />
+    <MESSAGE value="Add order to the assert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add order to the assert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
