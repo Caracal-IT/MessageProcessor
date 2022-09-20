@@ -80,6 +80,28 @@ public class AProcessor: IDisposable {
 	}
 	
 	[Fact]
+	public async Task ShouldNotProcessSecondInvalidMessages() {
+		// Arrange
+		var packet = PacketBuilder.CreateDefaultPacket()
+			.Build();
+		
+		_device.RequestOldPacket(0).Returns(packet);
+		
+		var secondPacket = PacketBuilder.CreateSecondPacket()
+																		.Build();
+
+		// Act
+		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
+		_device.MessageReceived += Raise.EventWith(this, new MessageEventArgs(secondPacket[1..]));
+		
+		// Assert
+		_device.DidNotReceive().PostTspv(Arg.Is<byte[]>(b => b[0] == 0x08 && b[1] == 0x20), 0x0B, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+		_device.DidNotReceive().PostTspv(Arg.Is<byte[]>(b => b[0] == 0x09 && b[1] == 0x10), 0x0B, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+
+		_logger.Received(1).LogError(Arg.Is<EventId>(e => e.Id == 1 && e.Name == "Invalid length 19 should be 20"), "Un unexpected error occured processing the message");
+	}
+	
+	[Fact]
 	public async Task ShouldProcessShouldNotProcessOldMessages() {
 		// Arrange
 		var packet = PacketBuilder.CreateDefaultPacket()
