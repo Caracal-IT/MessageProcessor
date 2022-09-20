@@ -30,7 +30,5 @@ public sealed class MessageParser {
     
     _lastError = $"Invalid length {_packet.Length} should be {PacketLength}";
     return false;
-
   }
-  
 }
