@@ -7,3 +7,4 @@ The message processor will receive messages from the contoso device and forward 
 3. Navigate to the MessageProcessor folder that contain the MessageProcessor.sln file.
 4. Run "dotnet restore" to restore the nuget packages.
 5. Run "dotnet test" to run the tests.
+6. run "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura" for code coverage.
