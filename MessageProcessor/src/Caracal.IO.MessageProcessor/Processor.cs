@@ -31,9 +31,8 @@ public sealed class Processor {
       ProcessMessage((InvalidMessage) msg);
 
     try {
-      while (!_cancellationToken.IsCancellationRequested) {
+      while (!_cancellationToken.IsCancellationRequested)
         await Task.Delay(1000, _cancellationToken);
-      }
     }
     catch (TaskCanceledException) {
       _logger.LogInformation("Processor stopped");

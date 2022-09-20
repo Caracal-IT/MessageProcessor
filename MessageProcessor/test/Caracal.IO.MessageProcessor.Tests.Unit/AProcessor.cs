@@ -8,10 +8,31 @@ public class AProcessor: IDisposable {
 	public AProcessor() {
 		_device = Substitute.For<IDevice>();
 		_logger = Substitute.For<ILogger<Processor>>();
-		_cancellationToken = new CancellationTokenSource();
-		_cancellationToken.CancelAfter(TimeSpan.FromMilliseconds(10));
+		_cancellationToken = new CancellationTokenSource(TimeSpan.FromMilliseconds(10));
 	}
 
+	[Fact]
+	public async Task ShouldCatchTokenCancellationException() {
+		// Act
+		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
+		_cancellationToken.Cancel(true);
+		
+		// Assert
+		_logger.Received(1).LogInformation("Processor stopped");
+	}
+	
+	[Fact]
+	public async Task ShouldNotLoopIfTaskWasCanceled() {
+		// Assert 
+		_cancellationToken.Cancel(false);
+		
+		// Act
+		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
+
+		// Assert
+		_logger.DidNotReceive().LogInformation("Processor stopped");
+	}
+	
 	[Fact]
 	public async Task ShouldSendRequestForFirstItem() {
 		// Act
@@ -31,7 +52,7 @@ public class AProcessor: IDisposable {
 		
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
-		
+
 		// Assert
 		Received.InOrder(() => {
 			_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x02 && b[1] == 0x20), 0x02, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
@@ -208,5 +229,8 @@ public class AProcessor: IDisposable {
 		});
 	}
 
-	public void Dispose() => _cancellationToken.Dispose();
+	public void Dispose() {
+		_cancellationToken.Cancel(false);
+		_cancellationToken.Dispose();
+	}
 }

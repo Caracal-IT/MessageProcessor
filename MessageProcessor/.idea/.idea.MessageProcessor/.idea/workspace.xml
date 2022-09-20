@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="add test coverage" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="update settings">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +56,7 @@
       <workItem from="1663579951206" duration="28356000" />
       <workItem from="1663648961213" duration="325000" />
       <workItem from="1663650226894" duration="312000" />
-      <workItem from="1663676991896" duration="1553000" />
+      <workItem from="1663676991896" duration="2822000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <created>1663581643066</created>
@@ -265,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663678517153</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update settings">
+      <created>1663678574928</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663678574928</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,52 +285,65 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="292" />
+    <option name="symbolColumnWidth" value="279" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="test 100% 0/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="test 99% 1/190" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="test 99% 1/190" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor.Tests.Unit 99% 1/190" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="test 99% 1/190" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor.Tests.Unit 99% 1/190" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor.Tests.Unit 99% 1/190" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Processor 99% 1/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Processor 99% 1/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="ProcessAsync() 94% 1/17" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Processor 96% 3/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 4/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 98% 3/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Processor 96% 3/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ProcessAsync() 82% 3/17" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -358,7 +381,6 @@
     <MESSAGE value="Add second packet in builder" />
     <MESSAGE value="Add third packet to the builder" />
     <MESSAGE value="Add order to the assert" />
-    <MESSAGE value="update settings" />
     <MESSAGE value="Remove packet length from message builder params" />
     <MESSAGE value="Refactor code" />
     <MESSAGE value="check for messages lager than 20" />
@@ -366,9 +388,27 @@
     <MESSAGE value="Test for invalid messages" />
     <MESSAGE value="Remove dead code" />
     <MESSAGE value="add test coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test coverage" />
+    <MESSAGE value="update settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="update settings" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="35" containingFunctionPresentation="method 'ProcessAsync'">
+            <startOffsets>
+              <option value="1232" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1233" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Caracal.IO.MessageProcessor.Messages.ValidMessage" memberName="Date" />
