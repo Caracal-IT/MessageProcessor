@@ -47,12 +47,14 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 															      .WithPacketId(0x05)
+															      
 															      .WithFirstTspvStatus(0x08)
 															      .WithFirstTspvDateOffset(0x0B)
+															      
+															      .WithSecondTspvStatus(0x09)
+															      .WithSecondTspvDateOffset(0x0C)
+															      
 			                              .Build();
-		
-		secondPacket[13] = 0x09;
-		secondPacket[15] = 0x0C;
 
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -73,12 +75,14 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																    .WithPacketId(0x05)
+																    
 																    .WithFirstTspvStatus(0x08)
 																    .WithFirstTspvDateOffset(0x01)
+																    
+																    .WithSecondTspvStatus(0x09)
+																    .WithSecondTspvDateOffset(0x01)
+																    
 																	  .Build();
-		
-		secondPacket[13] = 0x09;
-		secondPacket[15] = 0x01;
 
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -100,12 +104,14 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x01)
+																	  
 																	  .WithFirstTspvStatus(0x08)
 																	  .WithFirstTspvDateOffset(0x0B)
+																	  
+																	  .WithSecondTspvStatus(0x09)
+																	  .WithSecondTspvDateOffset(0x0C)
+																	  
 																		.Build();
-		
-		secondPacket[13] = 0x09;
-		secondPacket[15] = 0x0C;
 
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -126,23 +132,28 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x05)
+																	  
 																	  .WithFirstTspvStatus(0x08)
 																	  .WithFirstTspvDateOffset(0x0B)
+																	  
+																	  .WithSecondTspvStatus(0x09)
+																	  .WithSecondTspvDateOffset(0x0B)
+																	  
 																		.Build();
 		
-		secondPacket[13] = 0x09;
-		secondPacket[15] = 0x0B;
 		_device.RequestOldPacket(5).Returns(secondPacket);
 		
 		var thirdPacket =PacketBuilder.CreateDefaultPacket()
 																  .WithPacketId(0x06)
+																  
 																  .WithFirstTspvStatus(0x10)
 																  .WithFirstTspvDateOffset(0x0C)
-															    .Build();
-		
-		thirdPacket[13] = 0x11;
-		thirdPacket[15] = 0x0C;
-		
+															    
+																  .WithSecondTspvStatus(0x11)
+																  .WithSecondTspvDateOffset(0x0C)
+																  
+																  .Build();
+
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
 		_device.MessageReceived += Raise.EventWith(this, new MessageEventArgs(thirdPacket));

@@ -34,6 +34,21 @@ public sealed class PacketBuilder {
     
     return this;
   }
+  
+  public PacketBuilder WithSecondTspvStatus(byte firstBit, byte? secondBit = null) {
+    _packet[13] = firstBit;
+
+    if (secondBit.HasValue)
+      _packet[14] = secondBit.Value;
+    
+    return this;
+  }
+
+  public PacketBuilder WithSecondTspvDateOffset(byte offset) {
+    _packet[15] = offset;
+    
+    return this;
+  }
 
   public byte[] Build() => (byte[]) _packet.Clone();
 }
