@@ -44,7 +44,6 @@ public sealed class Processor {
     switch (message) {
       case InvalidMessage msg: ProcessMessage(msg); break;
       case ValidMessage msg: ProcessMessage(msg); break;
-      default: _logger.LogError(new EventId(2, $"Message of type {message.GetType()} not supported"), "Message not supported"); break;
     }
   }
 
