@@ -4,14 +4,10 @@ namespace Caracal.IO.MessageProcessor.Tests.Unit;
 
 public class AMessageParser {
   private const byte PacketLength = 20;
-  private readonly byte[] _validPacket =  
-  {
-    0x01, // Version 
-    0x04, // Packet Id
-    0x62, 0x55, 0x76, 0x5E, // Offset in seconds
-    0x02, 0x20, 0x02, 0x4D, 0x06, 0x9E, 0x3F, // TSPV 1
-    0x03, 0x10, 0x0A, 0x4D, 0x06, 0x9E, 0x3F // TSPV 2
-  };
+  private readonly byte[] _validPacket;
+
+  public AMessageParser() =>
+    _validPacket = PacketBuilder.CreateDefaultPacket().Build();
   
   [Fact]
   public void ShouldReturnInvalidMessageWhenInputIsNull() {

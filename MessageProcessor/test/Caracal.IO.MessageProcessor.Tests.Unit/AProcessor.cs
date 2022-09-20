@@ -48,9 +48,9 @@ public class AProcessor: IDisposable {
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 															      .WithPacketId(0x05)
 															      .WithFirstTspvStatus(0x08)
+															      .WithFirstTspvDateOffset(0x0B)
 			                              .Build();
 		
-		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0C;
 
@@ -74,9 +74,9 @@ public class AProcessor: IDisposable {
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																    .WithPacketId(0x05)
 																    .WithFirstTspvStatus(0x08)
+																    .WithFirstTspvDateOffset(0x01)
 																	  .Build();
 		
-		secondPacket[8] = 0x01;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x01;
 
@@ -101,9 +101,9 @@ public class AProcessor: IDisposable {
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x01)
 																	  .WithFirstTspvStatus(0x08)
+																	  .WithFirstTspvDateOffset(0x0B)
 																		.Build();
 		
-		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0C;
 
@@ -127,9 +127,9 @@ public class AProcessor: IDisposable {
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x05)
 																	  .WithFirstTspvStatus(0x08)
+																	  .WithFirstTspvDateOffset(0x0B)
 																		.Build();
-
-		secondPacket[8] = 0x0B;
+		
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0B;
 		_device.RequestOldPacket(5).Returns(secondPacket);
@@ -137,9 +137,9 @@ public class AProcessor: IDisposable {
 		var thirdPacket =PacketBuilder.CreateDefaultPacket()
 																  .WithPacketId(0x06)
 																  .WithFirstTspvStatus(0x10)
+																  .WithFirstTspvDateOffset(0x0C)
 															    .Build();
 		
-		thirdPacket[8] = 0x0C;
 		thirdPacket[13] = 0x11;
 		thirdPacket[15] = 0x0C;
 		
@@ -166,8 +166,8 @@ public class AProcessor: IDisposable {
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x01)
 																	  .WithFirstTspvStatus(0x08)
+																	  .WithFirstTspvDateOffset(0x0B)
 																		.Build();
-		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0B;
 		_device.RequestOldPacket(1).Returns(secondPacket);
@@ -175,9 +175,9 @@ public class AProcessor: IDisposable {
 		var thirdPacket = PacketBuilder.CreateDefaultPacket()
 																   .WithPacketId(0x02)
 																   .WithFirstTspvStatus(0x10)
+																   .WithFirstTspvDateOffset(0x0C)
 																   .Build();
 		
-		thirdPacket[8] = 0x0C;
 		thirdPacket[13] = 0x11;
 		thirdPacket[15] = 0x0C;
 		

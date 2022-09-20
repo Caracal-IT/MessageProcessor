@@ -29,5 +29,11 @@ public sealed class PacketBuilder {
     return this;
   }
 
+  public PacketBuilder WithFirstTspvDateOffset(byte offset) {
+    _packet[8] = offset;
+    
+    return this;
+  }
+
   public byte[] Build() => (byte[]) _packet.Clone();
 }
