@@ -14,6 +14,14 @@ public sealed class PacketBuilder {
   }
 
   public static PacketBuilder CreateDefaultPacket() => new ();
+  
+  public static PacketBuilder CreateSecondPacket() {
+    var packet =  CreateDefaultPacket()
+                    ;
+    
+    
+    return packet;
+  }
 
   public PacketBuilder WithPacketId(byte id) {
     _packet[1] = id;

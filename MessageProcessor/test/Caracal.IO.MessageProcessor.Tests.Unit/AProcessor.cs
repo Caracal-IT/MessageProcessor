@@ -52,7 +52,7 @@ public class AProcessor: IDisposable {
 															      .WithFirstTspvDateOffset(0x0B)
 															      
 															      .WithSecondTspvStatus(0x09)
-															      .WithSecondTspvDateOffset(0x0C)
+															      .WithSecondTspvDateOffset(0x0B)
 															      
 			                              .Build();
 
@@ -62,7 +62,7 @@ public class AProcessor: IDisposable {
 		
 		// Assert
 		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x08 && b[1] == 0x20), 0x0B, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
-		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x09 && b[1] == 0x10), 0x0C, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x09 && b[1] == 0x10), 0x0B, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
 	}
 	
 	[Fact]
@@ -109,7 +109,7 @@ public class AProcessor: IDisposable {
 																	  .WithFirstTspvDateOffset(0x0B)
 																	  
 																	  .WithSecondTspvStatus(0x09)
-																	  .WithSecondTspvDateOffset(0x0C)
+																	  .WithSecondTspvDateOffset(0x0B)
 																	  
 																		.Build();
 
@@ -119,7 +119,7 @@ public class AProcessor: IDisposable {
 		
 		// Assert
 		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x08 && b[1] == 0x20), 0x0B, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
-		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x09 && b[1] == 0x10), 0x0C, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
+		_device.Received(1).PostTspv(Arg.Is<byte[]>(b => b[0] == 0x09 && b[1] == 0x10), 0x0B, Arg.Is<float>(v => v > 1.2345 && v < 1.2346));
 	}
 
 	[Fact]
@@ -176,22 +176,28 @@ public class AProcessor: IDisposable {
 		
 		var secondPacket = PacketBuilder.CreateDefaultPacket()
 																	  .WithPacketId(0x01)
+																	  
 																	  .WithFirstTspvStatus(0x08)
 																	  .WithFirstTspvDateOffset(0x0B)
+																	  
+																	  .WithSecondTspvStatus(0x09)
+																	  .WithSecondTspvDateOffset(0x0B)
+																	  
 																		.Build();
-		secondPacket[13] = 0x09;
-		secondPacket[15] = 0x0B;
+
 		_device.RequestOldPacket(1).Returns(secondPacket);
 		
 		var thirdPacket = PacketBuilder.CreateDefaultPacket()
 																   .WithPacketId(0x02)
+																   
 																   .WithFirstTspvStatus(0x10)
 																   .WithFirstTspvDateOffset(0x0C)
+																   
+																   .WithSecondTspvStatus(0x11)
+																   .WithSecondTspvDateOffset(0x0C)
+																   
 																   .Build();
-		
-		thirdPacket[13] = 0x11;
-		thirdPacket[15] = 0x0C;
-		
+
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
 		_device.MessageReceived += Raise.EventWith(this, new MessageEventArgs(thirdPacket));
