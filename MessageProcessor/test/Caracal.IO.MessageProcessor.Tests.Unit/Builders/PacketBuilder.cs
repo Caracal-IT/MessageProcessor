@@ -26,6 +26,18 @@ public sealed class PacketBuilder {
     
     return packet;
   }
+  
+  public static PacketBuilder CreateThirdPacket() {
+    var packet =  CreateDefaultPacket().WithPacketId(0x06)
+																  
+                                       .WithFirstTspvStatus(0x10)
+                                       .WithFirstTspvDateOffset(0x0C)
+															    
+                                       .WithSecondTspvStatus(0x11)
+                                       .WithSecondTspvDateOffset(0x0C);
+    
+    return packet;
+  }
 
   public PacketBuilder WithPacketId(byte id) {
     _packet[1] = id;

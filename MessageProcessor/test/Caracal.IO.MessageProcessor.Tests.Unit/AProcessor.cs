@@ -114,15 +114,7 @@ public class AProcessor: IDisposable {
 		
 		_device.RequestOldPacket(5).Returns(secondPacket);
 		
-		var thirdPacket =PacketBuilder.CreateDefaultPacket()
-																  .WithPacketId(0x06)
-																  
-																  .WithFirstTspvStatus(0x10)
-																  .WithFirstTspvDateOffset(0x0C)
-															    
-																  .WithSecondTspvStatus(0x11)
-																  .WithSecondTspvDateOffset(0x0C)
-																  
+		var thirdPacket =PacketBuilder.CreateThirdPacket()
 																  .Build();
 
 		// Act
@@ -151,15 +143,8 @@ public class AProcessor: IDisposable {
 
 		_device.RequestOldPacket(1).Returns(secondPacket);
 		
-		var thirdPacket = PacketBuilder.CreateDefaultPacket()
+		var thirdPacket = PacketBuilder.CreateThirdPacket()
 																   .WithPacketId(0x02)
-																   
-																   .WithFirstTspvStatus(0x10)
-																   .WithFirstTspvDateOffset(0x0C)
-																   
-																   .WithSecondTspvStatus(0x11)
-																   .WithSecondTspvDateOffset(0x0C)
-																   
 																   .Build();
 
 		// Act
