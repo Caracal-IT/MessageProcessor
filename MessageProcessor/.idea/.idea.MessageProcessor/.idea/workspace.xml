@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="add test coverage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/src/Caracal.IO.MessageProcessor/MessageParser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/src/Caracal.IO.MessageProcessor/Extensions/ByteExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/Builders/PacketBuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,7 +41,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="b8fa8807-4a5f-43a7-8e82-caae6fdea728" />
+  <component name="RunManager" selected="9c098363-5c1e-4c36-9e97-bb308173cb81" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,6 +53,7 @@
       <workItem from="1663579951206" duration="28356000" />
       <workItem from="1663648961213" duration="325000" />
       <workItem from="1663650226894" duration="312000" />
+      <workItem from="1663676991896" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <created>1663581643066</created>
@@ -234,7 +237,35 @@
       <option name="project" value="LOCAL" />
       <updated>1663650485004</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Test innalid message send">
+      <created>1663677682329</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677682329</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Test for invalid messages">
+      <created>1663677879437</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677879437</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Remove dead code">
+      <created>1663678130131</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1663678130131</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add test coverage">
+      <created>1663678517153</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1663678517153</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,9 +275,54 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="209" />
+    <option name="symbolColumnWidth" value="292" />
     <coverage-tree-state>
-      <expand />
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="test 100% 0/178" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Processor 99% 1/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 1/312" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Caracal.IO.MessageProcessor 99% 1/134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Processor 99% 1/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ProcessAsync() 94% 1/17" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
       <select />
     </coverage-tree-state>
   </component>
@@ -265,9 +341,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Check message length" />
-    <MESSAGE value="Parse header" />
-    <MESSAGE value="parse header" />
     <MESSAGE value="Remove comments" />
     <MESSAGE value="Finish the parser" />
     <MESSAGE value="Add Processor" />
@@ -277,7 +350,6 @@
     <MESSAGE value="Add tests" />
     <MESSAGE value="Add edge case test" />
     <MESSAGE value="Add test for old messages" />
-    <MESSAGE value="Remove dead code" />
     <MESSAGE value="Refactor test" />
     <MESSAGE value="Create ststus in builder" />
     <MESSAGE value="With date offset" />
@@ -290,39 +362,13 @@
     <MESSAGE value="Remove packet length from message builder params" />
     <MESSAGE value="Refactor code" />
     <MESSAGE value="check for messages lager than 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="check for messages lager than 20" />
+    <MESSAGE value="Test innalid message send" />
+    <MESSAGE value="Test for invalid messages" />
+    <MESSAGE value="Remove dead code" />
+    <MESSAGE value="add test coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test coverage" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs</url>
-          <line>53</line>
-          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="54" containingFunctionPresentation="method 'ProcessMessage'">
-            <startOffsets>
-              <option value="1824" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1875" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs</url>
-          <line>66</line>
-          <properties documentPath="$PROJECT_DIR$/src/Caracal.IO.MessageProcessor/Processor.cs" initialLine="67" containingFunctionPresentation="method 'RequestMissingPackets'">
-            <startOffsets>
-              <option value="2123" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2190" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Caracal.IO.MessageProcessor.Messages.ValidMessage" memberName="Date" />
