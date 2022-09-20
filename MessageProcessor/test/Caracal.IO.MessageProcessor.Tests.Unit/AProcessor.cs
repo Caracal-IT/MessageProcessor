@@ -4,16 +4,7 @@ public class AProcessor: IDisposable {
 	private readonly IDevice _device;
 	private readonly ILogger<Processor> _logger;
 	private readonly CancellationTokenSource _cancellationToken;
-	
-	private byte[] _defaultPacket =  
-	{
-		0x01, // Version 
-		0x04, // Packet Id
-		0x62, 0x55, 0x76, 0x5E, // Offset in seconds
-		0x02, 0x20, 0x02, 0x4D, 0x06, 0x9E, 0x3F, // TSPV 1
-		0x03, 0x10, 0x0A, 0x4D, 0x06, 0x9E, 0x3F // TSPV 2
-	};
-	
+
 	public AProcessor() {
 		_device = Substitute.For<IDevice>();
 		_logger = Substitute.For<ILogger<Processor>>();
@@ -33,7 +24,10 @@ public class AProcessor: IDisposable {
 	[Fact]
 	public async Task ShouldProcessFirstMessage() {
 		// Arrange
-		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		var packet = PacketBuilder.CreateDefaultPacket()
+													    .Build();
+		
+		_device.RequestOldPacket(0).Returns(packet);
 		
 		// Act
 		await Processor.ProcessAsync(_logger, _device, _cancellationToken.Token);
@@ -46,10 +40,15 @@ public class AProcessor: IDisposable {
 	[Fact]
 	public async Task ShouldProcessTwoSequentialMessages() {
 		// Arrange
-		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		var packet = PacketBuilder.CreateDefaultPacket()
+			                        .Build();
 		
-		var secondPacket = (byte[]) _defaultPacket.Clone();
-		secondPacket[1] = 0x05;
+		_device.RequestOldPacket(0).Returns(packet);
+		
+		var secondPacket = PacketBuilder.CreateDefaultPacket()
+															      .WithPacketId(0x05)
+			                              .Build();
+		
 		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
@@ -67,10 +66,15 @@ public class AProcessor: IDisposable {
 	[Fact]
 	public async Task ShouldProcessShouldNotProcessOldMessages() {
 		// Arrange
-		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		var packet = PacketBuilder.CreateDefaultPacket()
+			                        .Build();
 		
-		var secondPacket = (byte[]) _defaultPacket.Clone();
-		secondPacket[1] = 0x05;
+		_device.RequestOldPacket(0).Returns(packet);
+		
+		var secondPacket = PacketBuilder.CreateDefaultPacket()
+																    .WithPacketId(0x05)
+																	  .Build();
+		
 		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x01;
 		secondPacket[13] = 0x09;
@@ -88,11 +92,16 @@ public class AProcessor: IDisposable {
 	[Fact]
 	public async Task ShouldProcessTwoSequentialMessagesWithRollover() {
 		// Arrange
-		_defaultPacket[1] = 255;
-		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		var packet = PacketBuilder.CreateDefaultPacket()
+			                        .Build();
 		
-		var secondPacket = (byte[]) _defaultPacket.Clone();
-		secondPacket[1] = 0x01;
+		packet[1] = 255;
+		_device.RequestOldPacket(0).Returns(packet);
+		
+		var secondPacket = PacketBuilder.CreateDefaultPacket()
+																	  .WithPacketId(0x01)
+																		.Build();
+		
 		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
@@ -110,18 +119,25 @@ public class AProcessor: IDisposable {
 	[Fact]
 	public async Task ShouldProcessMissedMessages() {
 		// Arrange
-		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		var packet = PacketBuilder.CreateDefaultPacket()
+			                        .Build();
 		
-		var secondPacket = (byte[]) _defaultPacket.Clone();
-		secondPacket[1] = 0x05;
+		_device.RequestOldPacket(0).Returns(packet);
+		
+		var secondPacket = PacketBuilder.CreateDefaultPacket()
+																	  .WithPacketId(0x05)
+																		.Build();
+		
 		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0B;
 		_device.RequestOldPacket(5).Returns(secondPacket);
 		
-		var thirdPacket = (byte[]) _defaultPacket.Clone();
-		thirdPacket[1] = 0x06;
+		var thirdPacket =PacketBuilder.CreateDefaultPacket()
+																  .WithPacketId(0x06)
+															    .Build();
+		
 		thirdPacket[6] = 0x10;
 		thirdPacket[8] = 0x0C;
 		thirdPacket[13] = 0x11;
@@ -141,19 +157,25 @@ public class AProcessor: IDisposable {
 	[Fact]
 	public async Task ShouldProcessMissedMessagesWithRollOver() {
 		// Arrange
-		_defaultPacket[1] = 255;
-		_device.RequestOldPacket(0).Returns(_defaultPacket);
+		var packet = PacketBuilder.CreateDefaultPacket()
+			                        .Build();
 		
-		var secondPacket = (byte[]) _defaultPacket.Clone();
-		secondPacket[1] = 0x01;
+		packet[1] = 255;
+		_device.RequestOldPacket(0).Returns(packet);
+		
+		var secondPacket = PacketBuilder.CreateDefaultPacket()
+																	  .WithPacketId(0x01)
+																		.Build();
 		secondPacket[6] = 0x08;
 		secondPacket[8] = 0x0B;
 		secondPacket[13] = 0x09;
 		secondPacket[15] = 0x0B;
 		_device.RequestOldPacket(1).Returns(secondPacket);
 		
-		var thirdPacket = (byte[]) _defaultPacket.Clone();
-		thirdPacket[1] = 0x02;
+		var thirdPacket = PacketBuilder.CreateDefaultPacket()
+																   .WithPacketId(0x02)
+																   .Build();
+		
 		thirdPacket[6] = 0x10;
 		thirdPacket[8] = 0x0C;
 		thirdPacket[13] = 0x11;

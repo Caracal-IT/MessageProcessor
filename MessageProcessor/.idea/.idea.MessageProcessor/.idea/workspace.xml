@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Add tests">
-      <change beforePath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" afterDir="false" />
+    <list default="true" id="565d4208-07ab-4ba4-8584-327ffdbd23f0" name="Changes" comment="Remove dead code">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessageProcessor/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,9 @@
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AMessageParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ettienemare/Documents/Development/CS/MessageProcessor/MessageProcessor/test/Caracal.IO.MessageProcessor.Tests.Unit/AProcessor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -136,7 +139,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663623504858</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add edge case test">
+      <created>1663624048753</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663624048753</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add test for old messages">
+      <created>1663624244469</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663624244469</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Remove dead code">
+      <created>1663624309965</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663624309965</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +192,10 @@
     <MESSAGE value="Writing tests for the processor" />
     <MESSAGE value="Sequencial message test" />
     <MESSAGE value="Add tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests" />
+    <MESSAGE value="Add edge case test" />
+    <MESSAGE value="Add test for old messages" />
+    <MESSAGE value="Remove dead code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove dead code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
